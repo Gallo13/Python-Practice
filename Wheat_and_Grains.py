@@ -18,3 +18,13 @@ def square(number):
 
 def total():
     return (1 << 64) - 1
+
+##############################################################
+
+def square(number):    
+    if number <= 0 or number > 64:
+        raise ValueError("square must be between 1 and 64")
+    return 2**(number-1)
+    
+def total(number=64):
+    return sum(2**(item) for item in range(number))
